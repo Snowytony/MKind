@@ -6,8 +6,8 @@
 	\ at the start.
 -Unspecified amount needs (as in, no limit specified) should have sublines
 	for when someone contributes to that need. These lines should
-	begin with a /
--Partially finished requests should be marked similarly to the Unspecified 	amount needs
+	begin with a \
+-Partially finished requests should be marked similarly to the unspecified amount needs
 -The need files will be updated with more requests. Each new request
 	will be added to the beginning of the file, pushing the rest down.
 /////////////
@@ -27,7 +27,8 @@ Example Needs.txt:
 		another ship.
 -------------
 
-11.6.2013--- T Snow (putting name here means you have assigned yourself/are 			working on this task)
+11.6.2013--- T Snow (putting name here means you have assigned yourself/are 			
+			working on this task)
 		\11.8.2013 added derpBg.png
 			coolBg.png
 			superBg.png - Tony
