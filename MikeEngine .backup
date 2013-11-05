@@ -1,0 +1,56 @@
+package mikeengine;
+
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+
+/**
+ *
+ * MWatkins Oct 30, 2013
+ */
+public class MikeEngine {
+
+    
+
+    static interactivePanel levelPanel;
+
+    public static void pause() {
+        try {
+            Thread.sleep(10); // wait 10ms
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("MEngine");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(fx, fy);
+        frame.setResizable(false);
+        frame.setVisible(true);
+        levelPanel = new interactivePanel();
+        levelPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+        addship();
+        frame.getContentPane().add(levelPanel);
+        levelPanel.requestFocusInWindow();
+        while (true) {
+            System.out.println("after done?");
+            pause();
+            levelPanel.move();
+            levelPanel.repaint();                
+        }
+    }
+
+    static void addship() {
+        PlayerShip ship = new PlayerShip(100, 25, 25, px, 0, py, 0);
+        ship.setGraphic("right-arrow.jpg");
+        levelPanel.addObject(ship);
+       for (int i = 0; i < 5; i++) {
+            PlayerShip ship2 = new PlayerShip((int) (Math.random() * 1000) + 100, (int) (Math.random() * 1000) + 100, 25, px, px / 2, py, 0);
+            ship2.setMovement((int) (Math.random() * 10) / 5, (int) (Math.random() * 10) / 2);
+            levelPanel.addObject(ship2);
+        }
+        System.out.println("done");
+    }
+
+}
