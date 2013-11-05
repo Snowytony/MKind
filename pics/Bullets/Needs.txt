@@ -13,7 +13,8 @@
 
 11.5.2013---
 	I need a 5x25 "splash/recoil" image for when the beam is hitting
-	an object (this will go at the connection of the beam and the 	object)
+	an object (this will go at the connection of the beam and the 	
+	object)
 ------------
 
 11.5.2013---
