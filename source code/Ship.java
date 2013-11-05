@@ -1,18 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mikeengine;
 
 /**
- *
+ * This class is used to define what a ship needs in order to function with 
+ * the game
  * @author MWatkins
  */
 public abstract class Ship extends OnScreenObject {
 
     Gun myGun;
-    int[] fLocations = new int[16];
+    int[] fLocations = new int[16];//the dimensions of each location the ship can fire from
 
     public Ship(int x, int y, int sizeX, int sizeY, int cxMax, int cxMin, int cyMax, int cyMin) {
         super(x, y, sizeX, sizeY, cxMax, cxMin, cyMax, cyMin);

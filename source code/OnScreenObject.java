@@ -4,27 +4,32 @@ import java.awt.Color;
 import java.awt.Image;
 import java.net.URL;
 import javax.swing.ImageIcon;
-
+/**
+ * 
+ * This class defines what every object that appears on the screen
+ * will need.
+ * @author MWatkins
+ */
 public abstract class OnScreenObject {
 
     private ImageIcon graphic;
     Image g;
-    protected int xmin;
-    protected int ymin;
-    protected int xsize;
-    protected int ysize;
-    protected int rise;
-    protected int run;
-    protected int containerYMax;
-    protected int containerYMin;
-    protected int containerXMax;
-    protected int containerXMin;
+    protected int xmin;//left bound of object
+    protected int ymin;//right bound of object
+    protected int xsize;//horizontal size of object
+    protected int ysize;//vertical size of object
+    protected int rise;//vertical movement per redraw
+    protected int run;//horizontal movement per redraw
+    protected int containerYMax;//object cannot vertically go beyond
+    protected int containerYMin;//object cannot vertically go under
+    protected int containerXMax;//object cannot horizontally go beyond
+    protected int containerXMin;//object cannot horizontally go under
 
-    protected boolean visible;
+    protected boolean visible;//toggles existence of object
     protected boolean allowedOffscreen;
-    protected boolean isSelected;
+    protected boolean isSelected;//if the object was clicked on
 
-    protected Color color;
+    protected Color color;//color of object, if not a graphic
 
     OnScreenObject(int x, int y, int sizeX, int sizeY, int cxMax, int cxMin, int cyMax, int cyMin) {
         xmin = x;
